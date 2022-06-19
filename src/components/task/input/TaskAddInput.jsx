@@ -8,6 +8,8 @@ export const TaskAddInput = ({
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    // テキスト入力されていない場合タスクが作成できないようにする
+    if (inputText === '') return;
     setTaskList([
       ...taskList,
       {
